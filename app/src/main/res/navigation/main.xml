@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.mihailchistousov.leroymerlin.screens.main.MainFragment"
+        android:label="main"
+        tools:layout="@layout/main" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mihailchistousov.leroymerlin.screens.main.SearchFragment"
+        android:label="search"
+        tools:layout="@layout/search" />
+
+    <action
+        android:id="@+id/to_search"
+        app:destination="@id/searchFragment"
+        app:popUpToInclusive="true"/>
+</navigation>

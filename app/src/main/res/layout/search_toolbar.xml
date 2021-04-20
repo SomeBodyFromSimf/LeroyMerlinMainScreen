@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mihailchistousov.leroymerlin.customview.CollapsibleToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:minHeight="80dp"
+    app:layoutDescription="@xml/toolbar_scene"
+    android:fitsSystemWindows="false"
+    tools:ignore="ContentDescription"
+    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+    <View
+        android:id="@+id/search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/green"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="Поиск товаров"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:paddingTop="80dp"
+        android:paddingBottom="22dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/search_bg"
+        app:layout_constraintStart_toStartOf="@id/search" />
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/white_rounded_corners"
+        android:padding="16dp"
+        android:clickable="true"
+        android:text="Поиск"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:transitionName="searchField"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toStartOf="@id/btnScan"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/btnScan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/white_rounded_corners"
+        android:padding="12dp"
+        android:src="@drawable/ic_scan"
+        app:layout_constraintTop_toTopOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/search_bg"
+        app:tint="@color/grey" />
+
+
+    <ImageView
+        android:id="@+id/btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/green_rounded_corners"
+        android:transitionName="searchBtn"
+        android:layout_margin="6dp"
+        app:layout_constraintEnd_toEndOf="@id/search"
+        app:layout_constraintTop_toTopOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_search"
+        app:tint="@color/white"
+        android:transitionName="searchBtnIcon"
+        app:layout_constraintStart_toStartOf="@id/btnSearch"
+        app:layout_constraintEnd_toEndOf="@id/btnSearch"
+        app:layout_constraintTop_toTopOf="@id/btnSearch"
+        app:layout_constraintBottom_toBottomOf="@id/btnSearch"/>
+
+</com.mihailchistousov.leroymerlin.customview.CollapsibleToolbar>

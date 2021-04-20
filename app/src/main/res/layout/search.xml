@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mihailchistousov.leroymerlin.screens.main.SearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="85dp"
+        android:gravity="bottom"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:autofillHints="@null"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Поиск"
+                android:inputType="text"
+                android:paddingVertical="16dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:transitionName="searchField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/back" />
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/green_rounded_corners"
+                android:contentDescription="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_search"
+                android:transitionName="searchBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white"
+                android:transitionName="searchBtnIcon"
+                app:layout_constraintStart_toStartOf="@id/btnSearch"
+                app:layout_constraintEnd_toEndOf="@id/btnSearch"
+                app:layout_constraintTop_toTopOf="@id/btnSearch"
+                app:layout_constraintBottom_toBottomOf="@id/btnSearch"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/catalogList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:layout_marginVertical="32dp"/>
+
+    <LinearLayout
+        android:id="@+id/llRecentlyViewed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Недавно просмотренные"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentlyViewed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginVertical="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLimitedOffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Предложение ограничено"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLimitedOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginVertical="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBestPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Лучшая цена"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBestPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginVertical="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
